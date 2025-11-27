@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f2f2f2;
+    background: #4824a9;
 }
 
 /* BOTÓN HAMBURGUESA */
@@ -119,8 +119,209 @@ body {
     
 }
 
+.bg-cuerpo{
+    background-color: #4824a9;
+    color: white;
+}
 
 /* Cuando el menú está abierto, el contenido se corre */
 body.menu-open .content {
     margin-left: 280px;
+}
+
+/* estilos de formulario de tarjeta */
+.form-tar {
+    background: #3a2374; /* Tono oscuro para el formulario */
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    color: white;
+}
+
+.form-tar label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-tar input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: white;
+    box-sizing: border-box;
+}
+
+.form-tar input:focus {
+    outline: none;
+    border-bottom-color: #ffcc00;
+}
+
+.form-tar button {
+    background-color:#e6221a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.form-tar button:hover {
+    background-color: #e64a19;
+}
+/*estilos de saldo*/
+.parrafo-saldo strong{
+ font-family: 'Press Start 2P', cursive; /* Una fuente de estilo pixel, por ejemplo de Google Fonts */
+    font-size: 32px; /* Aumentamos el tamaño */
+    color: white; /* O el color que necesites */
+    background-color: #4824a9; /* O el fondo que prefieras */
+    padding: 10px;
+    display: inline-block;
+}
+
+/*efectos*/
+#tarjeta-cont{
+    display: none;
+}
+
+#saldo{
+    display: none;
+}
+#lista-tarjeta{
+    display: none;
+}
+#trans{
+  display: none;
+}
+/*modulo del historial*/
+.hist-item {
+    padding: 12px 10px;
+    color: white;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.hist-item small {
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+}
+
+.hist-item strong {
+    font-size: 20px;
+    color: #ffffff;
+}
+.boton{
+    background:#e6221a;
+    color:white;
+    padding:10px;
+    text-decoration: none;
+}
+/*estilos de recarga*/
+/* ------------------------------ */
+/* Estilos para recargar tarjeta  */
+/* ------------------------------ */
+
+.recargar-form {
+    background: #3a2374;
+    padding: 20px;
+    border-radius: 8px;
+    width: 350px;
+    color: white;
+}
+
+.recargar-form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.recargar-form input,
+.recargar-form select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    color: white;
+    margin-bottom: 15px;
+}
+
+.recargar-form input:focus,
+.recargar-form select:focus {
+    outline: none;
+    border-bottom: 2px solid #ffcc00;
+}
+
+.boton {
+    background: #e40303; /* tu rojo */
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.boton:hover {
+    background: #c30202;
+}
+
+.titulo{
+    color: white;
+}
+.cuerpo{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+}
+/*estilos de confirmar pago*/
+.confirmar-box {
+    background: #3a2374;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    color: white;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.confirmar-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.confirmar-box p {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+.confirmar-box strong {
+    color: #ffcc00; /* Amarillo para resaltar */
+}
+
+.btn-confirmar {
+    background: #e40303; /* Rojo principal */
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn-confirmar:hover {
+    background: #c30202;
 }

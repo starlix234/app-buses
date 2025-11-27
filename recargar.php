@@ -21,17 +21,16 @@ $result = $stmt->get_result();
 <head>
 <meta charset="UTF-8">
 <title>Recargar tarjeta</title>
+<link rel="stylesheet" href="assets/css/estilos.css">
 </head>
-<body>
+<body class="cuerpo">
 
-<h2>💳 Recargar tarjeta</h2>
+<h2 class="titulo">💳 Recargar tarjeta</h2>
 
-<form action="lib/confirmar-pago.php" method="POST">
+<form action="lib/confirmar-pago.php" method="POST" class="recargar-form">
     
     <label>Monto a recargar:</label>
     <input type="number" name="monto" required min="100">
-
-    <br><br>
 
     <label>Selecciona una tarjeta:</label>
     <select name="id_tarjeta" required>
@@ -44,8 +43,7 @@ $result = $stmt->get_result();
 
     <input type="hidden" name="id_usuario" value="<?= $id_usuario ?>">
 
-    <br><br>
-    <button type="submit">Recargar ahora</button>
+    <button type="submit" class="boton">Recargar ahora</button>
 </form>
 
 </body>

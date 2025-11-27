@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <title>Tarjeta</title>
 </head>
 <body>
-<form action="lib/guardar-tarjeta.php" method="POST">
+<form class="form-tar col-lg-2" action="lib/guardar-tarjeta.php" method="POST">
+    
     <input type="hidden" name="id_usuario" value="<?php echo $_SESSION['id_usuario']; ?>">
     <label for="card_number">Número de Tarjeta:</label>
     <input type="text" id="card_number" name="card_number" required>

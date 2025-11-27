@@ -9,7 +9,6 @@ use Transbank\Webpay\WebpayPlus\Transaction;
 if (isset($_POST['token_ws'])) {
     die("❌ Error: token_ws NO debe recibirse aquí. Este archivo no procesa pagos.");
 }
-
 // ===============================================
 
 $id_usuario  = intval($_POST['id_usuario'] ?? 0);
@@ -19,6 +18,9 @@ $monto       = intval($_POST['monto'] ?? 0);
 if ($id_usuario <= 0 || $id_tarjeta <= 0 || $monto <= 0) {
     die("❌ Datos inválidos.");
 }
+
+// Guardar ID del usuario para cuando Webpay regrese
+echo $_SESSION['id_usuario_pago'] = $id_usuario;
 
 // Crear transacción Webpay
 $apiKey = "579B532A7440BB0C9079DED94D31EA1615BACEB56610332264630D42D0A36B1C";
@@ -32,7 +34,7 @@ $return_url = "http://localhost/app-buses/lib/commit.php";
 
 $response = $transaction->create($buy_order, $session_id, $monto, $return_url);
 
-// Datos de Webpay
+// Datos Webpay
 $url   = $response->getUrl();
 $token = $response->getToken();
 
@@ -43,6 +45,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("iii", $id_usuario, $id_tarjeta, $monto);
 $stmt->execute();
 
+// Guardar ID de la recarga para commit.php
 $_SESSION['id_recarga'] = $stmt->insert_id;
 
 // Redirigir automáticamente a Webpay

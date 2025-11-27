@@ -96,13 +96,23 @@ $stmt2->execute();
 /* ========================================================
    7) MOSTRAR RESULTADOS AL USUARIO
    ======================================================== */
-
+/*
 if ($status_pago === "pagado") {
     echo "<h1 style='color:green;'>✔ Pago exitoso</h1>";
     echo "<p>Tu recarga fue procesada correctamente.</p>";
 } else {
     echo "<h1 style='color:red;'>❌ Pago rechazado</h1>";
     echo "<p>El banco no autorizó la transacción.</p>";
+}*/
+
+if ($status_pago === "pagado") {
+
+    // Registrar recarga como movimiento
+    $sql3 = "INSERT INTO movimientos (id_usuario, tipo, monto, descripcion)
+             VALUES (?, 'recarga', ?, 'Recarga desde Webpay')";
+    $stmt3 = $conn->prepare($sql3);
+    $stmt3->bind_param("ii", $_SESSION['id_usuario'], $amount);
+    $stmt3->execute();
 }
 
 // Mostrar detalles (solo debug, puedes ocultarlo luego)
