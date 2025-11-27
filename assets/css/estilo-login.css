@@ -1,0 +1,78 @@
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: #2A1A73; /* Fondo morado */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color:white;
+    }
+
+    .container {
+      width: 360px;
+      background: #2A1A73;
+      text-align: center;
+      padding: 40px 25px;
+      border-radius: 20px;
+      color: #fff;
+      position: relative;
+    }
+
+    /* Icono nube */
+    .cloud {
+      width: 80px;
+      margin: 0 auto 15px auto;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      margin-bottom: 25px;
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 30px;
+      padding: 12px;
+      background: #E50914; /* rojo */
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #ff2630;
+    }
+    .ancho{
+        width:200px;
+    }
